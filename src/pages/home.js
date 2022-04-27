@@ -1,0 +1,16 @@
+import Layout from "../_layout/layout";
+import SearchLayout from "../_layout/searchlayout";
+import HomeMain from "../components/home/homeMain";
+import RealTimeSearch from "../components/comp_public/realtimeSearch";
+import Banner from "../components/comp_public/banner";
+
+const Home = () => {
+    return (
+        <SearchLayout>
+            <HomeMain/>
+            <Banner/>
+            <RealTimeSearch/>
+        </SearchLayout>
+    )
+}
+export default Home;
