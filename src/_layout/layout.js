@@ -8,7 +8,7 @@ const Layout = ({children}) => {
     return (
         <>
             <StyledNav>
-                <div>
+            <div>
                     <Link to="/">
                         <span>Bizno_Copy</span>
                     </Link>
@@ -25,14 +25,9 @@ const Layout = ({children}) => {
                         메일문의
                     </Link>
                 </div>
-                <div>
-                    <Link to="/sendmail">
-                        send_mail
-                    </Link>
-                </div>
-            <StyledInfo>
-                추가메뉴
-            </StyledInfo>
+                <StyledInfo>
+
+                </StyledInfo>
             </StyledNav>
             <StyledMain>
             <section>

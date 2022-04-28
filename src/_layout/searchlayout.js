@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 import SearchSection from "../components/comp_public/searchsection";
+import Footer from "../components/footer/footer";
 
 const SearchLayout = ({children}) => {
     return (
@@ -26,11 +27,6 @@ const SearchLayout = ({children}) => {
                         메일문의
                     </Link>
                 </div>
-                <div>
-                    <Link to="/sendmail">
-                        send_mail
-                    </Link>
-                </div>
                 <StyledInfo>
 
                 </StyledInfo>
@@ -41,7 +37,7 @@ const SearchLayout = ({children}) => {
    
             </StyledMain>
             <StyledFooter>
-                <div>푸터단입니다</div>
+                <Footer/>
             </StyledFooter>
         </>
     )
@@ -82,7 +78,7 @@ const StyledFooter = styled.div`
     width: 100%;
     margin: 0 auto;
     padding: 3rem 0;
-    background-color: #efefef;
+    background-color: #a0a0a0;
 
     & a {
         padding-top: 0.3rem;
