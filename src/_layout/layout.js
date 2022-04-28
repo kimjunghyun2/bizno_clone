@@ -3,6 +3,7 @@
 import React from "react";
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import Footer from "../components/footer/footer";
 
 const Layout = ({children}) => {
     return (
@@ -36,7 +37,7 @@ const Layout = ({children}) => {
    
             </StyledMain>
             <StyledFooter>
-                <div>푸터단입니다</div>
+                <Footer/>
             </StyledFooter>
         </>
     )
