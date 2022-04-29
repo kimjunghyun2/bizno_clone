@@ -5,7 +5,6 @@ import styled from "styled-components";
 const SearchLog = () => {
     return(
         <StyledWrap>
-            <p>실시간 검색어 입니다 지금은 li ul을 사용합니다.</p>
             <ul>
                 <h1>실시간 검색어</h1>
                 <StyledList><a>검색어1</a></StyledList>
@@ -30,6 +29,12 @@ const StyledWrap = styled.div`
     float: right;
     background-color: #efefef;
     border-radius: 30px;
+
+     & h1 {
+         color: #fff;
+        background-color: #efefef;
+        border-radius: 10px;
+    }
 `
 
 const StyledList = styled.li`
