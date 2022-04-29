@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+import {Link} from "react-router-dom";
 import Banner from "../comp_public/banner";
 import SearchSection from "../comp_public/searchsection";
 import { useInput } from "../../hook/useInput";
@@ -11,11 +12,21 @@ const Footer = () => {
         <>
             <StyledFC>
                 <FooterMargin>
-                    
-                    <p><span>11111-11111</span></p>
+                    <div>
+                        <Link to="/search">
+                            <span>사업자 번호로 검색</span>
+                        </Link>
+                    </div>
+                    <br/>
+                    <div>
+                        <Link to="/sendmail">
+                            <span>메일문의하기</span>
+                        </Link>
+                    </div>
                     <p style={{color : '#fff'}}>22222-22222</p>
 
                     <SearchTamplate>
+                        
                     <Blank/>
                     <div>
                         <label htmlFor="search-keyword"></label>
@@ -54,6 +65,18 @@ const Footer = () => {
 export default Footer;
 
 
+const FadeOut = keyframes`
+    0% {
+    opacity: 1;
+    }
+    50% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+`
+
 const Blank = styled.div`
     min-height: 3rem;
     `
@@ -87,6 +110,9 @@ const StyledFC = styled.div`
     margin: 0 auto;
     padding: 1rem 0;
     background-color: #a0a0a0;
+    ${(props)=> props.active &&`
+            animation: ${FadeOut} 2s 1s infinite linear alternate;
+            `}
 
     & a {
         padding-top: 0.3rem;
@@ -102,7 +128,10 @@ const StyledFC = styled.div`
         color: #fff;
         cursor: pointer;
         :hover {
-            color: #8f8f8f;
+            //transition: ease-in;
+            //transition-delay: 0.1s;
+            //transition-timing-function: ease-in ;
+            color: #5fdff1;
         }
     }
     
@@ -115,7 +144,11 @@ const StyledFC = styled.div`
         cursor: pointer;
 
         :hover {
-            color: #8f8f8f;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            //transition: ease-in;
+            //transition-delay: 0.1s;
+            //transition-timing-function: ease-in ;
+            color: #5fdff1;
         }
     }
 

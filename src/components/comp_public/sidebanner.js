@@ -1,13 +1,14 @@
 //광고 배너 기능에 해당 단 img는 그때 그때 달라질 수 있음 
 import React from "react";
 import styled from "styled-components";
+import SwiperBanner from "./swiperbanner";
 
 
 const SideBanner = () => {
     return(
         <StyledWrap>
             <BannerStyle>
-            <p>사이드 배너입니다. 실사용시에는 없어야 합니다 swipper로 구현할 수도 있습니다.</p>
+                <SwiperBanner/>
             </BannerStyle>
             <Blank/>
             

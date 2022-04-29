@@ -1,3 +1,4 @@
+//레지스터 메인에 대신 쓰고 있음 
 import React, { useCallback, useState } from "react"
 import {Link} from "react-router-dom";
 import styled from "styled-components";
@@ -6,9 +7,18 @@ import { useInput } from "../../hook/useInput";
 const RegisterMain = () => {
     const [email,onChangeUserEmail] = useInput("");
     const [name, onChangeUserName] = useInput("");
-    const [content, onChangeContent] = useInput("");
+    const [password, onChangeUserPassword] = useInput("");
 
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const [passwordCheckMessage, setPasswordCheckMessage] = useState(false);
 
+    const onChangeConfirmPassword = useCallback(
+        (event) => {
+            setConfirmPassword(event.target.value);
+            setPasswordCheckMessage(event.target.value !== password);
+        },
+        [password]
+    )
 
     return (
         <>
@@ -39,12 +49,12 @@ const RegisterMain = () => {
                 </div>
 
                 <div>
-                    <label htmlFor="user-content"></label>
+                    <label htmlFor="user-password"></label>
                     <textarea
                         cols="80"
-                        rows="20"
-                        value={content} 
-                        onChange={onChangeContent}
+                        rows="5"
+                        value={password} 
+                        onChange={onChangeUserPassword}
                         placeholder={"문의사항을 남겨주세요"}
                         autoComplete="off"
                      />
@@ -61,7 +71,7 @@ export default RegisterMain;
 
 const RegisterForm = styled.form`
     box-sizing: border-box;
-
+    max-width: 50rem;
     min-width: 18.75rem;
     width: 80%;
     height: 100%;
@@ -80,7 +90,6 @@ const RegisterForm = styled.form`
         border: 1px solid #DDD;
         font-size: 0.875rem;
         color: #666;
-        border-radius: 10px;
     }
 
     & input::placeholder{
@@ -89,7 +98,6 @@ const RegisterForm = styled.form`
     }
     & textarea {
         box-sizing: border-box;
-        border-radius: 10px;
         width: 50%;
         margin: 0.1rem 0;
         padding: 0.35rem;
@@ -119,7 +127,6 @@ const RegisterForm = styled.form`
         color: #fff;
         background: #4F5681;
         cursor: pointer;
-        border-radius: 15px;
     }
 
     & button:hover {
@@ -133,3 +140,11 @@ const RegisterForm = styled.form`
     }
 `
 
+const CheckMessage = styled.p`
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0.875rem;
+    color: red;
+    text-align: left;
+`

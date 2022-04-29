@@ -9,8 +9,9 @@ const Home = () => {
     return (
         <SearchLayout>
             <HomeMain/>
-            <Banner/>
             <RealTimeSearch/>
+            <Banner/>
+           
         </SearchLayout>
     )
 }

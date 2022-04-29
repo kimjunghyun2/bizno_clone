@@ -28,10 +28,16 @@ const StyledWrap = styled.div`
     height: 100%;
     margin: 0 auto;
     float: right;
+    background-color: #efefef;
+    border-radius: 30px;
 `
 
 const StyledList = styled.li`
+    list-style: none;
     text-align: center;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 30px;
 
     &a{
         justify-content: flex-end;

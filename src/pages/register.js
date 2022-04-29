@@ -1,7 +1,7 @@
 import Layout from "../_layout/layout";
 import RegisterMain from "../components/register/registerMain";
 
-const Register = () => {
+const Register= () => {
     return (
         <Layout>
             <RegisterMain/>

@@ -23,7 +23,7 @@ const SearchLayout = ({children}) => {
                 </div>
 
                 <div>
-                    <Link to="/register">
+                    <Link to="/sendmail">
                         메일문의
                     </Link>
                 </div>
@@ -77,6 +77,7 @@ const StyledFooter = styled.div`
 
     width: 100%;
     margin: 0 auto;
+    //margin-top: 24rem;
     padding: 3rem 0;
     background-color: #a0a0a0;
 

@@ -8,14 +8,16 @@ import SearchLog from "../comp_public/searchlog";
 
 const HomeMain = () => {
     return(
-        <StyledWrap>
-            <p>홈메인입니다</p>
+        <section>
+            <StyledWrap>
+                <p>홈메인입니다</p>
+            </StyledWrap>
             <StyledInfo>
                 <SideBanner/>
                 <Blank/>
                 <SearchLog/>
             </StyledInfo>
-        </StyledWrap>
+        </section>
 
     )
 }
@@ -35,6 +37,8 @@ const StyledInfo = styled.div`
     cursor: default;
     width: 15rem;
     float: right;
+    margin-right: 16rem;
+    margin-top: 3rem;
 
     & button {
         border: none;

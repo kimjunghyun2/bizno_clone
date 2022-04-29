@@ -22,7 +22,7 @@ const Layout = ({children}) => {
                 </div>
 
                 <div>
-                    <Link to="/register">
+                    <Link to="/sendmail">
                         메일문의
                     </Link>
                 </div>
@@ -78,7 +78,7 @@ const StyledFooter = styled.div`
     width: 100%;
     margin: 0 auto;
     padding: 3rem 0;
-    background-color: #efefef;
+    background-color: #a0a0a0;
 
     & a {
         padding-top: 0.3rem;
